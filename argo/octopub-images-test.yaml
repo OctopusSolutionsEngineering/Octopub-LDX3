@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: octopub-test-update-images-demo
+  namespace: argocd
+  annotations:
+    argo.octopus.com/project: "update-images-demo"
+    argo.octopus.com/environment: "test"  
+spec:
+  project: ldx3
+  source:
+    repoURL: https://github.com/OctopusSolutionsEngineering/Octopub-LDX3.git
+    targetRevision: HEAD
+    path: manifests/image-update/environments/test
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: test-update-images-demo
+  syncPolicy:
+#    automated: 
+#      prune: true
+#      selfHeal: true
+    syncOptions:
+    - Validate=false
+    - CreateNamespace=true
