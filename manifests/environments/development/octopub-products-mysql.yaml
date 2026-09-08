@@ -18,6 +18,7 @@ spec:
           ports:
             - name: http-product
               containerPort: 8083
+          env:              
             - name: MIGRATE_AT_START
               value: "true"
             - name: COGNITO_DISABLE_AUTH
