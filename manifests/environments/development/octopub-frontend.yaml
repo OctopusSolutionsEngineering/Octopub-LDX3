@@ -14,7 +14,12 @@ spec:
     spec:
       containers:
         - name: web
-          image: index.docker.io/octopussamples/octopub-frontend:20260905.744.1
+          image: index.docker.io/octopussamples/octopub-frontend:20260909.752.1
           ports:
             - containerPort: 8080
-              name: frontend
+              name: http-port
+          env:
+            - name: clientIdentifier
+              value: ""
+            - name: featureToggleSlug
+              value: ""

@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: auditservice
-          image: index.docker.io/octopussamples/octopub-audit-microservice:20260908.2401.1
+          image: index.docker.io/octopussamples/octopub-audit-microservice:20260909.2419.1
           ports:
             - name: http-audit
               containerPort: 10000
           env:
             - name: MIGRATE_AT_START
-              value: "true"
+              value: "false"
             - name: COGNITO_DISABLE_AUTH
               value: "true"
