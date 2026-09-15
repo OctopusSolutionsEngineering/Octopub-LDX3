@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: index.docker.io/octopussamples/octopub-frontend:20260910.756.1-automated-update-20260910-201611
+          image: index.docker.io/octopussamples/octopub-frontend:20260914.765.1
           ports:
             - containerPort: 8080
               name: frontend
