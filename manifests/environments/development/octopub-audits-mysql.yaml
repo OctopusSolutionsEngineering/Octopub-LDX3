@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auditservice
-          image: index.docker.io/octopussamples/octopub-audit-microservice:20260914.2435.1
+          image: index.docker.io/octopussamples/octopub-audit-microservice:20260915.2436.1
           ports:
             - name: http-audit
               containerPort: 10000
